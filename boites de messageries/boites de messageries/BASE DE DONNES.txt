@@ -1,0 +1,65 @@
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_destinataire` int(11) DEFAULT NULL,
+  `id_auteur` int(11) DEFAULT NULL,
+  `message` text,
+  
+  PRIMARY KEY (`id`)
+) 
+ 
+--
+-- Table structure for table `post`
+--
+
+CREATE TABLE `post` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author_id` int(11) DEFAULT NULL,
+  `name` varchar(150) DEFAULT NULL,
+  `content` text,
+  `date_created` datetime DEFAULT CURRENT_TIMESTAMP,
+  `date_edited` datetime DEFAULT CURRENT_TIMESTAMP,
+  `friends_only` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) 
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(150) DEFAULT NULL,
+  `motdepasse` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+--
+-- Table structure for table `inscription`
+--
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pseudo` varchar(150) DEFAULT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `mdp` varchar(150) DEFAULT NULL,
+   `genre` varchar(150) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+)
+--
+-- Table structure for table `iinformation`
+--
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pseudo` varchar(150) DEFAULT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `mdp` varchar(150) DEFAULT NULL,
+  `genre` varchar(150) DEFAULT NULL,
+  `universite` varchar(150) DEFAULT NULL,
+   `etude` varchar(150) DEFAULT NULL,
+   `phone` varchar(150) DEFAULT NULL,
+   `habite` varchar(150) DEFAULT NULL,
+   `img` varchar(150) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+)
